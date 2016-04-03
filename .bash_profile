@@ -15,6 +15,21 @@ shopt -s nocaseglob;
 # Append to the Bash history file, rather than overwriting it
 shopt -s histappend;
 
+# Bash eternal history
+# http://www.debian-administration.org/articles/543.		
+PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND ; }"'echo -e $$\\t$USER\\t$HOSTNAME\\tscreen $WINDOW\\t`date +%D%t%T%t%Y%t%s`\\t$PWD"$(history 1)" >> ~/.bash_eternal_history'
+# Turn on checkwinsize
+shopt -s checkwinsize
+#Prompt edited from default
+[ "$PS1" = "\\s-\\v\\\$ " ] && PS1="[\u \w]\\$ "
+if [ "x$SHLVL" != "x1" ]; then # We're not a login shell
+    for i in /etc/profile.d/*.sh; do
+				if [ -r "$i" ]; then
+						. $i
+				fi
+		done
+fi
+
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
 
