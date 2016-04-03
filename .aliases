@@ -6,6 +6,9 @@ alias treeacl="tree -A -C -L 2"
 alias stat="stat -x"
 alias preview="open -a preview"
 
+# Trash system
+t() { mv "$@" ~/.Trash/; }
+
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."
