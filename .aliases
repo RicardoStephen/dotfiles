@@ -1,7 +1,7 @@
 # Miscellaneous shortcuts
 alias md="mkdir"
 alias m="less"
-alias g="git"
+alias gac="git add -u && git commit -m"
 alias du="du -ch --max-depth=1"
 alias treeacl="tree -A -C -L 2"
 alias stat="stat -x"
@@ -18,13 +18,18 @@ alias .....="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
+# Navigation shortcuts
+alias d="cd ~/Documents"
+alias g="cd ~/Google\ Drive"
+alias a="cd ~/Archives"
+
 # Safety
 alias mv="mv -i"
 alias cp="cp -i"
 set -o noclobber
 
 # Editor
-alias e='emacs'
+alias e='emacsclient -nq'
 alias em='emacs -nw'
 alias eqq='emacs -nw -Q'
 export EDITOR='emacs -nw'
