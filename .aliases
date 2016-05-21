@@ -2,6 +2,7 @@
 alias md="mkdir"
 alias m="less"
 alias gac="git add -u && git commit -m"
+alias status="git status"
 alias du="du -ch --max-depth=1"
 alias treeacl="tree -A -C -L 2"
 alias stat="stat -x"
