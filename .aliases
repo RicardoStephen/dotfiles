@@ -11,7 +11,7 @@ alias preview="open -a preview"
 # Trash system
 t() { mv "$@" ~/.Trash/; }
 
-# Easier navigation: .., ..., ...., ....., ~ and -
+# Filesystem navigation
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
