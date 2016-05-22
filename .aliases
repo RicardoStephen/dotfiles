@@ -8,8 +8,8 @@ alias preview="open -a preview"
 
 # git shortcuts
 alias gac="git add -u && git commit -m"
-alias s="git status"
-alias p="git push origin master"
+alias gst="git status"
+alias gp="git push origin master"
 
 # Trash system
 t() { mv "$@" ~/.Trash/; }
