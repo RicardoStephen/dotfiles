@@ -7,6 +7,7 @@ alias stat="stat -x"
 alias preview="open -a preview"
 
 # git shortcuts
+alias ga="git add"
 alias gac="git add -u && git commit -m"
 alias gst="git status"
 alias gp="git push origin master"
