@@ -64,4 +64,4 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 
 # Add ls colors
 export CLICOLOR=1
-export LSCOLORS=Fxgxcxdxbxegedabagacad
+export LSCOLORS=FxgxcxdxBxegedabagacad
