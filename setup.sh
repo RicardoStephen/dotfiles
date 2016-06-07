@@ -17,8 +17,11 @@ if [ ! -f /usr/local/bin/trash ]; then
     trash osx-trash
 fi
 
+# customization file
+touch .custom
+
 # config files
-files=(.aliases .bash_profile .bash_prompt .bashrc .curlrc .exports .functions .gitignore .hgignore .hushlogin .inputrc .screenrc .spacemacs .wgetrc)
+files=(.aliases .bash_profile .bash_prompt .bashrc .curlrc .exports .functions .gitignore .hgignore .hushlogin .inputrc .screenrc .spacemacs .wgetrc .custom)
 
 for f in "${files[@]}"
 do
