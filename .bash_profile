@@ -16,7 +16,7 @@ shopt -s nocaseglob;
 shopt -s histappend;
 
 # Bash eternal history
-# http://www.debian-administration.org/articles/543.		
+# http://www.debian-administration.org/articles/543.
 PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND ; }"'echo -e $$\\t$USER\\t$HOSTNAME\\tscreen $WINDOW\\t`date +%D%t%T%t%Y%t%s`\\t$PWD"$(history 1)" >> ~/.bash_eternal_history'
 # Turn on checkwinsize
 shopt -s checkwinsize
@@ -66,4 +66,3 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 export CLICOLOR=1
 export LSCOLORS=FxgxcxdxBxegedabagacad
 export LS_COLORS="di=1;35;40:ln=36;40:so=32;40:pi=33;40:ex=1;31;40:bd=34;46:cd=34;43:su=0;41:sg=0;46:tw=0;42:ow=0;43:"
-

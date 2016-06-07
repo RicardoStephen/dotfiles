@@ -1,10 +1,16 @@
-# Miscellaneous shortcuts
+# Miscellaneous shortcuts and functions
 alias md="mkdir"
 alias m="less"
 alias du="du -ch --max-depth=1"
 alias treeacl="tree -A -C -L 2"
 alias stat="stat -x"
+alias t="trash"
+ff () { find $1 -maxdepth 2 -name $2;}
+
+# Applicaiton shortcuts
 alias preview="open -a preview"
+alias subl="open -a sublime\ text"
+alias xcode="open -a Xcode"
 
 # git shortcuts
 alias ga="git add"
@@ -12,9 +18,6 @@ alias gac="git add -u && git commit -m"
 alias gst="git status"
 alias gpl="git pull origin master"
 alias gps="git push origin master"
-
-# Trash system
-t() { mv "$@" ~/.Trash/; }
 
 # Filesystem navigation
 alias ..="cd .."
@@ -38,8 +41,6 @@ set -o noclobber
 alias e='emacsclient -nq'
 alias em='emacs -nw'
 alias eqq='emacs -nw -Q'
-export EDITOR='emacs -nw'
-export VISUAL='emacs -nw'
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -50,25 +51,20 @@ else # OS X `ls`
         export LSCOLORS='Exexcxdxbxegedabagacad'
 fi
 
-# List all files colorized in long format
+# ls shortcuts
 alias l="ls -l ${colorflag}"
-
-# List all files colorized in long format, including dot files
 alias ll="ls -alhH ${colorflag}"
-
-# List only directories
 alias lsd="ls -l ${colorflag} | grep --color=never '^d'"
-
-# Always use color output for `ls`
 alias ls="command ls ${colorflag}"
 
-# Always enable colored `grep` output
+# grep shortcuts
 # Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage.
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 # Enable aliases to be sudo’ed
+# http://askubuntu.com/questions/22037/aliases-not-available-when-using-sudo
 alias sudo='sudo '
 
 # Get week number
@@ -77,8 +73,8 @@ alias week='date +%V'
 # Stopwatch
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
 
-# Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade --all; brew cleanup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update'
+# OS X, Homebrew software update
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade --all; brew cleanup'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
