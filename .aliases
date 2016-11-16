@@ -35,6 +35,8 @@ set -o noclobber
 # Editor
 alias e='emacs'
 alias em='emacsclient -nw'
+alias startserver='emacs --daemon'
+alias stopserver="emacsclient -e '(kill-emacs)'"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
