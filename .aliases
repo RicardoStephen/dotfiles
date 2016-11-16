@@ -27,20 +27,14 @@ alias .....="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
-# Navigation shortcuts
-alias d="cd ~/Documents"
-alias g="cd ~/Google\ Drive"
-alias a="cd ~/Archives"
-
 # Safety
 alias mv="mv -i"
 alias cp="cp -i"
 set -o noclobber
 
 # Editor
-alias e='emacsclient -nq'
-alias em='emacs -nw'
-alias eqq='emacs -nw -Q'
+alias e='emacs'
+alias em='emacsclient -nw'
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`

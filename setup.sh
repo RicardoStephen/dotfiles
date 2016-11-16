@@ -7,21 +7,11 @@ DST=~
 # setup directory for old dotfiles
 mkdir -p $SRC/old
 
-# install osx-trash
-if [ ! -f /usr/local/bin/trash ]; then
-    git clone https://github.com/sindresorhus/osx-trash
-    cd osx-trash
-    ./build
-    mv trash /usr/local/bin
-    cd $SRC
-    trash osx-trash
-fi
-
 # customization file
 touch .custom
 
 # config files
-files=(.aliases .bash_profile .bash_prompt .bashrc .curlrc .exports .functions .gitignore .hgignore .hushlogin .inputrc .screenrc .spacemacs .wgetrc .custom)
+files=(.aliases .bash_profile .bash_prompt .bashrc .curlrc .exports .functions .gitignore .hgignore .hushlogin .inputrc .screenrc .wgetrc .custom)
 
 for f in "${files[@]}"
 do
@@ -35,4 +25,6 @@ echo "TODO Configure terminal's appearance"
 echo "1. Shell->Import..."
 echo "2. Select settings.terminal"
 echo "3. Shell->Use Settings as Default"
-
+echo "TODO add to .spacemacs"
+echo "look at included .spacemacs for refernce"
+echo "TODO add emacsdameon script to login items"

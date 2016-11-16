@@ -261,8 +261,6 @@ you should place you code here."
                   (lambda () (interactive) (other-window 1)))
   (global-set-key (kbd "C-i")
                   (lambda () (interactive) (other-window -1)))
-  (when (display-graphic-p)
-    (set-face-attribute 'default nil :font "Input Mono Condensed-10" :weight 'ultralight))
   )
 
 
